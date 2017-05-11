@@ -1,0 +1,93 @@
+// Apply the java plugin to add support for Java
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+//設定其他基本的 :
+sourceCompatibility = 1.8 // 設置 JDK 版本
+ 
+// targetCompatibility = 1.8 //先放著不知道要幹嘛的
+ 
+//webAppDirName = 'WebContent' // 設置 WebApp 根目錄
+   
+//sourceSets.main.java.srcDir 'src' // 設置 Java 源碼所在目錄
+
+
+// Version settings
+ext {
+	swaggerVersion = '2.2.2'
+	junitVersion = '4.+'
+
+}
+
+
+buildscript {
+	ext {
+		springBootVersion = '1.5.3.RELEASE'
+	}
+
+
+repositories {
+    	jcenter()
+        mavenCentral()
+    }
+
+ dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+        classpath "io.spring.gradle:dependency-management-plugin:0.5.4.RELEASE"
+    }
+}
+
+
+
+// 設置maven庫地址
+repositories {
+    jcenter()
+    mavenCentral() //中央庫
+    maven { 
+   	url "http://repo.spring.io/libs-snapshot" //  自己定義庫位址
+    }
+}
+
+
+
+// 文檔
+//javadoc {
+//    options {
+//        failOnError = false
+//        encoding = "UTF-8"    
+//        docEncoding = "UTF-8" 
+//       charSet = "UTF-8" 
+//        linkSource = true
+//    }
+//}
+
+
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+	// --------- Spring Boot ---------
+	compile "org.springframework.boot:spring-boot-starter-web" //web項目
+	compile "org.springframework.boot:spring-boot-starter-security" //權限管理
+	compile "org.springframework.boot:spring-boot-starter-mail" 
+	// compile "org.springframework.boot:spring-boot-starter-data-mongodb"
+	compile "org.springframework.boot:spring-boot-starter-test"
+	// compile 'org.springframework.boot:spring-boot-starter-data-jpa' //JPA對應DAO
+	// compile 'org.springframework.boot:spring-boot-starter-thymeleaf' //view層,替代JSP
+	// compile 'org.springframework.boot:spring-boot-devtools' //開發工具 
+
+
+	// --------- 自動產生 RESTapi 文件 ---------
+	compile "io.springfox:springfox-swagger-ui:${swaggerVersion}"
+	compile "io.springfox:springfox-swagger2:${swaggerVersion}"
+	
+	// --------- JUnit --------- 
+    testCompile "junit:junit:${junitVersion}"
+	
+    
+    //固定Gradle的版本
+    task wrapper(type: Wrapper) {
+	gradleVersion = '2.8'
+	}
+    
+}

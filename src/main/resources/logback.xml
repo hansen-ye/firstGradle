@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<property name="LOG_HOME" value="../firstGradleLog" />
+	<property name="CHARSET" value="UTF-8" />
+	<property name="PATTERN" value="[%d{yyyy-MM-dd HH:mm:ss.SSS}][%thread][%-5level][%logger] %m%n" />
+
+	<!-- For heroku -->
+	<appender name="HEROKU_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${PATTERN}</pattern>
+        </encoder>
+    </appender>
+	
+	<appender name="HEROKU_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>firstGradle.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>${PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+	<logger name="com.exfantasy.exchange" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="HEROKU_CONSOLE" />
+		<appender-ref ref="HEROKU_FILE" />
+	</logger>
+
+	<root>
+		<level value="WARN" />
+		<appender-ref ref="HEROKU_CONSOLE" />
+		<appender-ref ref="HEROKU_FILE" />
+	</root>
+</configuration>

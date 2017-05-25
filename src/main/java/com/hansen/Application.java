@@ -1,19 +1,31 @@
 package com.hansen;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
+/**
+ * Application 是 SpringBoot 的啟動地方
+ * @author hansen.sen
+ *
+ */
+@SpringBootApplication(exclude = { SecurityAutoConfiguration.class })//可跳過驗證帳密彈出視窗
+public class Application extends SpringBootServletInitializer {
 
-@RestController
-@EnableAutoConfiguration
-public class Application {
+ public static void main(String[] args) {
+  SpringApplication.run(Application.class, args);
+    }
+ 
+ @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(Application.class);
+    }
+ 
+ @PostConstruct
+ public void postConstruct() {
+ }
 
-	@RequestMapping("/hello")
-	public String home() {
-		return "Spring Boot Hello";
-	}
-
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
 }

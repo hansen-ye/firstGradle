@@ -19,7 +19,7 @@
         </encoder>
     </appender>
 
-	<logger name="com.exfantasy.exchange" additivity="false">
+	<logger name="com.hansen" additivity="false">
 		<level value="INFO" />
 		<appender-ref ref="HEROKU_CONSOLE" />
 		<appender-ref ref="HEROKU_FILE" />

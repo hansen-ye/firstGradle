@@ -1,8 +1,16 @@
+# Gradle files
 build
 .gradle
+
+# Generated files
 bin
+
+# Java class files
 .classpath
+
+# Log Files
+*.log
+
+# 還不理解忽略檔案在哪裡
 .project
 .settings
-*.log
-*.md

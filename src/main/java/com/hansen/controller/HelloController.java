@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.hansen.service.GetFirstService;
 
 @Controller
-@RequestMapping(value = "/hello")
+@RequestMapping(value = "/test")
 public class HelloController {
 
 	@Autowired

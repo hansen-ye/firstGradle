@@ -12,7 +12,7 @@ bin
 *.log
 
 # md Files
-*.md
+.md
 
 # 還不理解忽略檔案在哪裡
 .project

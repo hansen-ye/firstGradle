@@ -13,3 +13,13 @@ ps: port的8090是從application.yml 重新設定的,預設為8080.
 ### 參考資料 : 
 Spring Boot Reference Guide(1.5.3.RELEASE) https://docs.spring.io/spring-boot/docs/current/reference/html/index.html
 ***
+### 佈署到 Heroku :
+1. Create New App   
+2. Deployment method: 選 GitHub  
+3. Search 出現GitHub專案列表,點要佈署的專案
+4. Enable Automatic Deploys   
+5. 讓專案build
++ 1. 按 Overview , 按 More -> View Logs 看Spring Boot 的圖有沒有跑起來了,有圖級代表server有啟動
++ 2. 若沒有,上個cdoe,讓Heroku自動幫忙佈署
++ 3. 按Open App 上面的URL就是專案的網址
+***

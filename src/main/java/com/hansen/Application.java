@@ -10,8 +10,6 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 /**
  * Application 是 SpringBoot 的啟動地方
- * @author hansen.sen
- *
  */
 @SpringBootApplication(exclude = { SecurityAutoConfiguration.class })//可跳過驗證帳密彈出視窗
 public class Application extends SpringBootServletInitializer {

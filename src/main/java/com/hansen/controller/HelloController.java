@@ -19,4 +19,9 @@ public class HelloController {
 	public @ResponseBody String home() {
 		return getFirstService.getHello();
 	}
+	
+	@RequestMapping(value = "/haha", method = RequestMethod.GET)
+	public @ResponseBody String testHaHa() {
+		return "ha ha ha ha ha";
+	}
 }

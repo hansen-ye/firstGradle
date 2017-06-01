@@ -73,7 +73,8 @@ dependencies {
 	// compile "org.springframework.boot:spring-boot-starter-data-mongodb"
 	compile "org.springframework.boot:spring-boot-starter-test"
 	// compile 'org.springframework.boot:spring-boot-starter-data-jpa' //JPA對應DAO
-    compile 'org.springframework.boot:spring-boot-starter-thymeleaf' //view層,替代JSP
+	//view層,替代JSP,Thymeleaf是一個XML/XHTML/HTML5模板引擎，可用於Web與非Web環境中的應用開發
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf' 
 	// compile 'org.springframework.boot:spring-boot-devtools' //開發工具 
 
 

@@ -7,25 +7,21 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
-/**
- * Application 是 SpringBoot 的啟動地方
- * @author hansen.sen
- *
- */
-@SpringBootApplication(exclude = { SecurityAutoConfiguration.class })//可跳過驗證帳密彈出視窗
+
+@SpringBootApplication(exclude = { SecurityAutoConfiguration.class })
 public class Application extends SpringBootServletInitializer {
 
- public static void main(String[] args) {
-  SpringApplication.run(Application.class, args);
-    }
- 
- @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(Application.class);
-    }
- 
- @PostConstruct
- public void postConstruct() {
- }
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(Application.class);
+	}
+
+	@PostConstruct
+	public void postConstruct() {
+	}
 
 }

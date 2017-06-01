@@ -14,14 +14,10 @@ public class HelloController {
 
 	@Autowired
 	private GetFirstService getFirstService;
-	
-	
+
 	@RequestMapping(method = RequestMethod.GET)
 	public @ResponseBody String home() {
-		
-		return 	getFirstService.getHello();
+		return getFirstService.getHello();
 	}
-	
 
-	
 }

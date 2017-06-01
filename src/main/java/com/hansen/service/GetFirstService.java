@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 public class GetFirstService {
 
 	public String getHello() {
-		
 		return "Spring Boot Hello";
 	}
 

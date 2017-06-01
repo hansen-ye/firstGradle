@@ -3,14 +3,14 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
-//³]©w¨ä¥L°ò¥»ªº :
-sourceCompatibility = 1.8 // ³]¸m JDK ª©¥»
+//è¨­å®šå…¶ä»–åŸºæœ¬çš„ :
+sourceCompatibility = 1.8 // è¨­ç½® JDK ç‰ˆæœ¬
  
-// targetCompatibility = 1.8 //¥ı©ñµÛ¤£ª¾¹D­n·F¹Àªº
+// targetCompatibility = 1.8 //å…ˆæ”¾è‘—ä¸çŸ¥é“è¦å¹¹å˜›çš„
  
-//webAppDirName = 'WebContent' // ³]¸m WebApp ®Ú¥Ø¿ı
+//webAppDirName = 'WebContent' // è¨­ç½® WebApp æ ¹ç›®éŒ„
    
-//sourceSets.main.java.srcDir 'src' // ³]¸m Java ·½½X©Ò¦b¥Ø¿ı
+//sourceSets.main.java.srcDir 'src' // è¨­ç½® Java æºç¢¼æ‰€åœ¨ç›®éŒ„
 
 
 // Version settings
@@ -40,18 +40,18 @@ repositories {
 
 
 
-// ³]¸mmaven®w¦a§}
+// è¨­ç½®mavenåº«åœ°å€
 repositories {
     jcenter()
-    mavenCentral() //¤¤¥¡®w
+    mavenCentral() //ä¸­å¤®åº«
     maven { 
-   	url "http://repo.spring.io/libs-snapshot" //  ¦Û¤v©w¸q®w¦ì§}
+   	url "http://repo.spring.io/libs-snapshot" //  è‡ªå·±å®šç¾©åº«ä½å€
     }
 }
 
 
 
-// ¤åÀÉ
+// æ–‡æª”
 //javadoc {
 //    options {
 //        failOnError = false
@@ -67,17 +67,17 @@ repositories {
 // In this section you declare the dependencies for your production and test code
 dependencies {
 	// --------- Spring Boot ---------
-	compile "org.springframework.boot:spring-boot-starter-web" //web¶µ¥Ø
-	compile "org.springframework.boot:spring-boot-starter-security" //Åv­­ºŞ²z
+	compile "org.springframework.boot:spring-boot-starter-web" //webé …ç›®
+	compile "org.springframework.boot:spring-boot-starter-security" //æ¬Šé™ç®¡ç†
 	compile "org.springframework.boot:spring-boot-starter-mail" 
 	// compile "org.springframework.boot:spring-boot-starter-data-mongodb"
 	compile "org.springframework.boot:spring-boot-starter-test"
-	// compile 'org.springframework.boot:spring-boot-starter-data-jpa' //JPA¹ïÀ³DAO
-	// compile 'org.springframework.boot:spring-boot-starter-thymeleaf' //view¼h,´À¥NJSP
-	// compile 'org.springframework.boot:spring-boot-devtools' //¶}µo¤u¨ã 
+	// compile 'org.springframework.boot:spring-boot-starter-data-jpa' //JPAå°æ‡‰DAO
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf' //viewå±¤,æ›¿ä»£JSP
+	// compile 'org.springframework.boot:spring-boot-devtools' //é–‹ç™¼å·¥å…· 
 
 
-	// --------- ¦Û°Ê²£¥Í RESTapi ¤å¥ó ---------
+	// --------- è‡ªå‹•ç”¢ç”Ÿ RESTapi æ–‡ä»¶ ---------
 	compile "io.springfox:springfox-swagger-ui:${swaggerVersion}"
 	compile "io.springfox:springfox-swagger2:${swaggerVersion}"
 	
@@ -85,7 +85,7 @@ dependencies {
     testCompile "junit:junit:${junitVersion}"
 	
     
-    //©T©wGradleªºª©¥»
+    //å›ºå®šGradleçš„ç‰ˆæœ¬
     task wrapper(type: Wrapper) {
 	gradleVersion = '2.8'
 	}

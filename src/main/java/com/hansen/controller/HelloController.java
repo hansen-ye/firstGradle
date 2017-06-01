@@ -19,5 +19,4 @@ public class HelloController {
 	public @ResponseBody String home() {
 		return getFirstService.getHello();
 	}
-
 }

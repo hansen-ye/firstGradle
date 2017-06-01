@@ -7,7 +7,8 @@
 ***
 ### 確認成功在Browser啟動專案 :
 專案啟動後到 Browser 輸入: http://localhost:8090/hello , 在輸入驗證(帳號:user/密碼:啟動後可知道) , 看到Spring Boot Hello(在程式自定義) , 卽成功.
-ps: port的8090是從application.yml 重新設定的,預設為8080.
+ps: port的8090是從application.yml 重新設定的,預設為8080.  
++ SecurityAutoConfiguration : 可跳過驗證帳密彈出視窗
 ***
 ### 參考資料 : 
 Spring Boot Reference Guide(1.5.3.RELEASE) https://docs.spring.io/spring-boot/docs/current/reference/html/index.html

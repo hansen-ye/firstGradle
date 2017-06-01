@@ -11,6 +11,9 @@ bin
 # Log Files
 *.log
 
+# md Files
+*.md
+
 # 還不理解忽略檔案在哪裡
 .project
 .settings

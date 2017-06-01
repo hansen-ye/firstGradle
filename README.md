@@ -6,7 +6,7 @@
 路徑 : src/main/resources/application.yml 的檔案可以在裡面設定 , 現在只有設定tomcat server port
 ***
 ### 確認成功在Browser啟動專案 :
-專案啟動後到 Browser 輸入: http://localhost:8090/hello , 在輸入驗證(帳號:user/密碼:啟動後可知道) , 看到Spring Boot Hello(在程式自定義) , 卽成功.
+專案啟動後到 Browser 輸入: http://localhost:8090/tests , 在輸入驗證(帳號:user/密碼:啟動後可知道) , 看到Spring Boot Hello(在程式自定義) , 卽成功.
 ps: port的8090是從application.yml 重新設定的,預設為8080.  
 + SecurityAutoConfiguration : 可跳過驗證帳密彈出視窗
 ***

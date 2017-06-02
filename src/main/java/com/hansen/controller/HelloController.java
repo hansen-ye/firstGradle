@@ -16,12 +16,14 @@ public class HelloController {
 	private GetFirstService getFirstService;
 
 	@RequestMapping(method = RequestMethod.GET)
-	public @ResponseBody String home() {
+	@ResponseBody
+	public String home() {
 		return getFirstService.getHello();
 	}
 	
 	@RequestMapping(value = "/haha", method = RequestMethod.GET)
-	public @ResponseBody String testHaHa() {
+	@ResponseBody
+	public String testHaHa() {
 		return "ha ha ha ha ha";
 	}
 }

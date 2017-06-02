@@ -1,3 +1,9 @@
 # ----- config port ---- 
 server:
     port: 8090
+   
+# ----- 連接MongoDB數據庫  ----   
+spring:
+    data:
+        mongodb:
+            uri: mongodb://admin:admin@ds161041.mlab.com:61041/first-gradle-db

@@ -1,8 +1,8 @@
 ### firstGradle所使用技術 :
-- 語言:jdk8
-- 版控:GitHub
-- 運行平台:Heroku 
-- 資料庫(NO SQL):mlab(MongoDB的雲端服務)
+- 語言 : jdk8
+- 版控 : GitHub
+- 運行平台 : Heroku 
+- 資料庫(NO SQL) : mlab(MongoDB的雲端服務)
 ***
 ### 建立專案 :
 建立Gradle專案,設定好 build.gradle(重要)等其它設定,建立GitHub 專案名稱(最好取一樣名稱),把建立好的URL帶到eclipse team->Share Project,

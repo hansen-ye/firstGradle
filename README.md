@@ -29,5 +29,5 @@ Spring Boot Reference Guide(1.5.3.RELEASE) https://docs.spring.io/spring-boot/do
 2. 點Java Application的專案名稱(這裡是RunFirstGradle)
 3. 點上面Arguments
 4. 在VM argument裡輸入自定義的變數名稱,前面加-D,例:-D變數名稱=值
-+ -DMONGODB_URI=mongodb://dbuser:dbpassword@ds161041.mlab.com:61041/dbName,即可取代在yaml裡連接MongoDB數據庫的uri的位址;會變成 spring:data:mongodb:uri:${MONGODB_URI}
++ -DMONGODB_URI=mongodb://dbuser:dbpassword@ds161041.mlab.com:61041/dbName,即可取代在yaml裡連接MongoDB數據庫的uri的位址;會是 spring:data:mongodb:uri:${MONGODB_URI}
 ***

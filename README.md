@@ -14,12 +14,20 @@ ps: port的8090是從application.yml 重新設定的,預設為8080.
 Spring Boot Reference Guide(1.5.3.RELEASE) https://docs.spring.io/spring-boot/docs/current/reference/html/index.html
 ***
 ### 佈署到 Heroku :
-1. Create New App   
-2. Deployment method: 選 GitHub  
+1. Create New App
+2. Deployment method: 選 GitHub
 3. Search 出現GitHub專案列表,點要佈署的專案
-4. Enable Automatic Deploys   
+4. Enable Automatic Deploys
 5. 讓專案build
 + 1. 按 Overview , 按 More -> View Logs 看Spring Boot 的圖有沒有跑起來了,有圖級代表server有啟動
 + 2. 若沒有,上個cdoe,讓Heroku自動幫忙佈署
 + 3. 按Open App 上面的URL就是專案的網址
+6. 若是已設定隱藏connect MongoDB URI的話,需在Settings->Config Variables->點選Reveal Config Vars,去作Heroku的設定,這樣才能讓Heroku連到mongodb
+***
+### 設定隱藏connect MongoDB URI(不讓java code上到GitHub時會把MongoDB帳密顯示出來):
+1. 把 MongoDB URI 放到run configurations 的專案
+2. 點Java Application的專案名稱(這裡是RunFirstGradle)
+3. 點上面Arguments
+4. 在VM argument裡輸入自定義的變數名稱,前面加-D,例:-D變數名稱=值
++ -DMONGODB_URI=mongodb://dbuser:dbpassword@ds161041.mlab.com:61041/dbName,即可取代在yaml裡連接MongoDB數據庫的uri的位址;會變成 spring:data:mongodb:uri:${MONGODB_URI}
 ***

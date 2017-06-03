@@ -1,3 +1,9 @@
+### firstGradle所使用技術 :
+- 語言:jdk8
+- 版控:GitHub
+- 運行平台:Heroku 
+- 資料庫(NO SQL):mlab(MongoDB的雲端服務)
+***
 ### 建立專案 :
 建立Gradle專案,設定好 build.gradle(重要)等其它設定,建立GitHub 專案名稱(最好取一樣名稱),把建立好的URL帶到eclipse team->Share Project,
  接著注意:要在 User or create repository in parent folder of project 打勾,按下專案名稱,然後在下面按下Create Repository,讓ecilpse建立專案在  workspace的第一層(避免由GitHub 重新import專案時,會造成路徑上的錯誤),之後設定.gitignore(忽略不上傳檔案,可參考https://github.com/github/gitignore or 參考此專案的.gitignore),之後commit and push.
@@ -24,7 +30,7 @@ Spring Boot Reference Guide(1.5.3.RELEASE) https://docs.spring.io/spring-boot/do
 + 3. 按Open App 上面的URL就是專案的網址
 6. 若是已設定隱藏connect MongoDB URI的話,需在Settings->Config Variables->點選Reveal Config Vars,去作Heroku的設定,這樣才能讓Heroku連到mongodb
 ***
-### 設定隱藏connect MongoDB URI(不讓java code上到GitHub時會把MongoDB帳密顯示出來):
+### 設定隱藏connect MongoDB URI(不讓java code上到GitHub時會把MongoDB帳密顯示出來) :
 1. 把 MongoDB URI 放到run configurations 的專案
 2. 點Java Application的專案名稱(這裡是RunFirstGradle)
 3. 點上面Arguments

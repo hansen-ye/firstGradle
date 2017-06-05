@@ -16,9 +16,6 @@
 ps: port的8090是從application.yml 重新設定的,預設為8080.  
 + SecurityAutoConfiguration : 可跳過驗證帳密彈出視窗
 ***
-### 參考資料 : 
-Spring Boot Reference Guide(1.5.3.RELEASE) https://docs.spring.io/spring-boot/docs/current/reference/html/index.html
-***
 ### 佈署到 Heroku :
 1. Create New App
 2. Deployment method: 選 GitHub
@@ -36,4 +33,9 @@ Spring Boot Reference Guide(1.5.3.RELEASE) https://docs.spring.io/spring-boot/do
 3. 點上面Arguments
 4. 在VM argument裡輸入自定義的變數名稱,前面加-D,例:-D變數名稱=值
 + -DMONGODB_URI=mongodb://dbuser:dbpassword@ds161041.mlab.com:61041/dbName,即可取代在yaml裡連接MongoDB數據庫的uri的位址;會是 spring:data:mongodb:uri:${MONGODB_URI}
+***
+### 參考資料 : 
+- Spring Boot Reference Guide(1.5.3.RELEASE) https://docs.spring.io/spring-boot/docs/current/reference/html/index.html
+- Spring Data MongoDB - Reference Documentation(Version 1.9.10.RELEASE) http://docs.spring.io/spring-data/mongodb/docs/1.9.10.RELEASE/reference/html/#dependencies.train-names
+***
 ***

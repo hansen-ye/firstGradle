@@ -38,4 +38,3 @@ ps: port的8090是從application.yml 重新設定的,預設為8080.
 - Spring Boot Reference Guide(1.5.3.RELEASE) https://docs.spring.io/spring-boot/docs/current/reference/html/index.html
 - Spring Data MongoDB - Reference Documentation(Version 1.9.10.RELEASE) http://docs.spring.io/spring-data/mongodb/docs/1.9.10.RELEASE/reference/html/#dependencies.train-names
 ***
-***

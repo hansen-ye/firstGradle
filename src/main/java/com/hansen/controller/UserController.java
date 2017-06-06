@@ -54,10 +54,15 @@ public class UserController {
 		return userService.findByAgeGreaterThan(age);
 	}
 	
-	//利用分頁
+	/*
+	 * <pre>
+	 * 使用年齡查詢超過幾歲的使用者
+	 * </pre>
+	 * 
+	 */
 	@RequestMapping(value = "/pageAge/{age}", method = RequestMethod.GET)
 	@ResponseBody
-	public Page<User> ffindByAgeGreaterThan(@PathVariable int age,Pageable page) {
+	public Page<User> findByAgeGreaterThan(@PathVariable int age,Pageable page) {
 		return userService.findByAgeGreaterThan(age,page);
 	}
 	

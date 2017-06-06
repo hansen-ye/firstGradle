@@ -21,9 +21,4 @@ public class HelloController {
 		return getFirstService.getHello();
 	}
 	
-	@RequestMapping(value = "/haha", method = RequestMethod.GET)
-	@ResponseBody
-	public String testHaHa() {
-		return "ha ha ha ha ha";
-	}
 }

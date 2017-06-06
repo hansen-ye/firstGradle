@@ -32,19 +32,26 @@ public class TestService {
 		userService.deleteAllUsers();
 		System.out.println("Delete all users succeed");
 		
-		userService.addUser("Hansen", Sex.MALE, 38);
-		System.out.println("Add Hansen succeed");
-		
-		userService.addUser("Tommy", Sex.MALE, 18);
-		System.out.println("Add Tommy succeed");
-		
-		userService.addUser("Square", Sex.FEMALE, 18);
-		System.out.println("Add Square succeed");
-		
 		List<User> usersAgeGreaterThan30 = userService.findByAgeGreaterThan(30);
 		System.out.println(usersAgeGreaterThan30);
 		
 		List<User> females = userService.findBySex(Sex.FEMALE);
 		System.out.println(females);
 	}
+	
+	@Test
+	public void testArray() {
+		userService.deleteAllUsers();
+		System.out.println("Delete all users succeed");
+		
+		String[] interest = {"eat","sleep"};
+		User user = new User();
+		user.setName("彤彤");
+		user.setAge(1);
+		user.setSex(Sex.FEMALE);
+		user.setInterest(interest);
+		userService.addArrayUser(user);
+		System.out.println("Add 彤彤 succeed");
+	}
+	
 }

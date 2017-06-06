@@ -20,11 +20,8 @@ public class User {
 	@ApiModelProperty(notes = "年齡", required = true)
 	private int age;
 
-	public User(String name, Sex sex, int age) {
-		this.name = name;
-		this.sex = sex;
-		this.age = age;
-	}
+	@ApiModelProperty(notes = "興趣", required = true)
+	private String[] interest;
 
 	public String getName() {
 		return name;
@@ -48,6 +45,14 @@ public class User {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+	
+	public String[] getInterest() {
+		return interest;
+	}
+
+	public void setInterest(String[] interest) {
+		this.interest = interest;
 	}
 
 	@Override

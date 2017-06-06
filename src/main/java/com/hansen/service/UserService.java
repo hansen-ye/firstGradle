@@ -21,9 +21,8 @@ public class UserService {
 		userRepo.deleteAll();
 	}
 	
-	public void addUser(String name, Sex sex, int age) {
-		User user = new User(name, sex, age);
-		userRepo.insert(user);
+	public User addArrayUser(User user) {
+		return userRepo.insert(user);
 	}
 	
 	public User findByName(String name) {

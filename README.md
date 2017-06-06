@@ -1,5 +1,7 @@
 ### firstGradle所使用技術 :
-- 語言 : jdk8
+- 版本 : jdk8
+- 自動化構建工具 : Gradle
+- 框架 : Spring Boot
 - 版控 : GitHub
 - 運行平台 : Heroku 
 - 資料庫(NO SQL) : mlab(MongoDB的雲端服務)

@@ -6,7 +6,7 @@ apply plugin: 'org.springframework.boot'
 //設定其他基本的 :
 sourceCompatibility = 1.8 // 設置 JDK 版本
  
-// targetCompatibility = 1.8 //先放著不知道要幹嘛的
+//targetCompatibility = 1.8 //先放著不知道要幹嘛的
  
 //webAppDirName = 'WebContent' // 設置 WebApp 根目錄
    
@@ -15,8 +15,9 @@ sourceCompatibility = 1.8 // 設置 JDK 版本
 
 // Version settings
 ext {
-	swaggerVersion = '2.2.2'
-	junitVersion = '4.+'
+		swaggerVersion = '2.2.2'
+		lombokVersion = '1.16.14'
+		junitVersion = '4.+'
 	
 }
 
@@ -76,6 +77,8 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf' //view層,替代JSP,Thymeleaf是一個XML/XHTML/HTML5模板引擎，可用於Web與非Web環境中的應用開發
 	// compile 'org.springframework.boot:spring-boot-devtools' //開發工具 
 
+// --------- https://projectlombok.org/ --------- 
+	compile "org.projectlombok:lombok:${lombokVersion}"
 
 	// --------- 自動產生 RESTapi 文件 ---------
 	compile "io.springfox:springfox-swagger-ui:${swaggerVersion}"

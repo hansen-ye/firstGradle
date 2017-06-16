@@ -1,4 +1,4 @@
-// Apply the java plugin to add support for Java
+// Apply the java plugin to add support for Java(使用的插件)
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
@@ -21,8 +21,9 @@ ext {
 	
 }
 
-
+// 代碼塊中腳本優先執行
 buildscript {
+	// ext 用於定義動態屬性
 	ext {
 		springBootVersion = '1.5.3.RELEASE'
 	}

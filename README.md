@@ -39,6 +39,7 @@ ps: port的8090是從application.yml 重新設定的,預設為8080.
 ### 參考資料 : 
 - Spring Boot Reference Guide(1.5.3.RELEASE) https://docs.spring.io/spring-boot/docs/current/reference/html/index.html
 - Spring Data MongoDB - Reference Documentation(Version 1.9.10.RELEASE) http://docs.spring.io/spring-data/mongodb/docs/1.9.10.RELEASE/reference/html/#dependencies.train-names
+- car模組參考位址 : https://github.com/suresk/tutorials4geeks-spring-mongodb
 ***
 ### 新增 _id auto increment 機制 : 
 此專案要先在MongoDB手動先在collection 新增 counters(可自由命名) 和手動先在 counters 裡 Documents 新增一筆資料 _id 要與想自動新增的 collection 名字要一致,seq預設為0,ex:{
